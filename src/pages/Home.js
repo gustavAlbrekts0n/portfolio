@@ -1,5 +1,6 @@
 import "pages/Home.css";
 import Project from "components/Project";
+import Footer from "components/Footer";
 
 function Home() {
     return (
@@ -60,6 +61,7 @@ function Home() {
                     />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

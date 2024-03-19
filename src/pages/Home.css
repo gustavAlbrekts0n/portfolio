@@ -3,6 +3,11 @@
     src: local("Ruda"), url(fonts/Ruda-Regular.ttf) format("truetype");
 }
 
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent element */
+}
+
 .root {
     width: 100%;
     font-family: Ruda;
@@ -44,6 +49,7 @@
 
 .intro-icon img {
     border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .projects {
@@ -70,7 +76,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
     /*background-color: yellowgreen;*/
 }
 
@@ -78,7 +84,13 @@
     width: 800px;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: box-shadow .15s ease-in;
+}
+
+.project img:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .project-info {
@@ -94,6 +106,42 @@
     color: rgb(80, 79, 79);
     text-align: left;
     /*background-color: pink;*/
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 50px;
+    /*background-color: aqua;*/
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /*background-color: orange;*/
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*background-color: green;*/
+}
+
+.social {
+    padding: 20px 0 20px 20px;
+    margin-left: 10px;
+    color: rgb(172, 35, 35);
+    transition: color .15s ease-in;
+}
+
+.social:hover {
+    color: rgb(126, 19, 19);
 }
 
 @media only screen and (max-width: calc(1.2 * 1600px)) {
