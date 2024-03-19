@@ -55,8 +55,9 @@
 }
 
 .projects-header {
+    width: 100%;
     margin-top: 0px;
-    padding-right: 60px;
+    padding-right: 50px;
     font-size: 25px;
     color: rgb(172, 35, 35);
 }
