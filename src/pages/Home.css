@@ -1,35 +1,49 @@
+@font-face {
+    font-family: "Ruda";
+    src: local("Ruda"), url(fonts/Ruda-Regular.ttf) format("truetype");
+}
+
 .root {
     width: 100%;
-    background-color: red;
+    font-family: Ruda;
+    color: rgb(31, 31, 31);
+    /*background-color: red;*/
 }
 
 .intro {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(236, 172, 77);
+    justify-content: center;
+    /*background-color: rgb(236, 172, 77);*/
 }
 
 .intro-hello {
+    transform: translateY(-100px);
+    margin-bottom: 150px;
     font-size: 40px;
     font-weight: 200;
-    font-family:monospace;
-    background-color: green;
+    /*background-color: green;*/
 }
 
 .intro-body {
+    transform: translateY(-100px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
 }
 
 .intro-tagline {
     width: 60%;
     font-size: 44px;
-    font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: yellow;
+    font-weight: 100;
+    /*background-color: yellow;*/
+}
+
+.intro-icon img {
+    border-radius: 50%;
 }
 
 .projects {
@@ -37,40 +51,53 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: cadetblue;
+    /*background-color: cadetblue;*/
 }
 
 .projects-header {
     margin-top: 0px;
-    padding-right: 50px;
+    padding-right: 60px;
+    font-size: 25px;
     color: rgb(172, 35, 35);
 }
 
 .project-list {
-    background-color: purple;
+    /*background-color: purple;*/
 }
 
 .project {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 20px;
-    background-color: yellowgreen;
+    margin-bottom: 80px;
+    /*background-color: yellowgreen;*/
 }
 
 .project img {
-    flex: 4;
-    width: 100%;
+    width: 800px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-info {
+    padding-left: 40px;
 }
 
 .project-title {
     flex: 2;
-    background-color: rgb(224, 120, 51);
+    /*background-color: rgb(224, 120, 51);*/
+}
+
+.project-desc {
+    color: rgb(80, 79, 79);
+    text-align: left;
+    /*background-color: pink;*/
 }
 
 @media only screen and (max-width: calc(1.2 * 1600px)) {
     .root {
         width: 80%;
-        background-color: orange;
+        /*background-color: orange;*/
     }
 }

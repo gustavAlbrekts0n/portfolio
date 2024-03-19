@@ -1,6 +1,6 @@
 :root {
   --max-width: 1600px;
-  --color-primary: rgb(84, 177, 206);
+  --color-primary: rgba(255, 255, 255, 0);
 }
 
 .App {
@@ -12,5 +12,5 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: rgb(20, 235, 117);
+  background-color: rgba(255, 255, 255, 0);
 }
