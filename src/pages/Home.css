@@ -3,6 +3,18 @@
     src: local("Ruda"), url(fonts/Ruda-Regular.ttf) format("truetype");
 }
 
+@keyframes glideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 a {
     text-decoration: none; /* Removes underline */
     color: inherit; /* Inherits color from parent element */
@@ -12,7 +24,7 @@ a {
     width: 100%;
     font-family: Ruda;
     color: rgb(31, 31, 31);
-    /*background-color: red;*/
+    background-color: red;
 }
 
 .intro {
@@ -20,7 +32,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*background-color: rgb(236, 172, 77);*/
+    background-color: rgb(236, 172, 77);
 }
 
 .intro-hello {
@@ -28,7 +40,8 @@ a {
     margin-bottom: 150px;
     font-size: 40px;
     font-weight: 200;
-    /*background-color: green;*/
+    animation: glideIn 1s ease forwards;
+    background-color: green;
 }
 
 .intro-body {
@@ -37,14 +50,15 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /*background-color: aquamarine;*/
+    background-color: aquamarine;
 }
 
 .intro-tagline {
     width: 60%;
     font-size: 44px;
     font-weight: 100;
-    /*background-color: yellow;*/
+    animation: glideIn 1s ease forwards;
+    background-color: yellow;
 }
 
 .intro-icon img {
@@ -57,7 +71,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /*background-color: cadetblue;*/
+    background-color: cadetblue;
 }
 
 .projects-header {
@@ -69,7 +83,7 @@ a {
 }
 
 .project-list {
-    /*background-color: purple;*/
+    background-color: purple;
 }
 
 .project {
@@ -77,7 +91,7 @@ a {
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 150px;
-    /*background-color: yellowgreen;*/
+    background-color: yellowgreen;
 }
 
 .project img {
@@ -99,13 +113,13 @@ a {
 
 .project-title {
     flex: 2;
-    /*background-color: rgb(224, 120, 51);*/
+    background-color: rgb(224, 120, 51);
 }
 
 .project-desc {
     color: rgb(80, 79, 79);
     text-align: left;
-    /*background-color: pink;*/
+    background-color: pink;
 }
 
 .footer {
@@ -115,7 +129,7 @@ a {
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 50px;
-    /*background-color: aqua;*/
+    background-color: aqua;
 }
 
 .copyright {
@@ -123,14 +137,14 @@ a {
     display: flex;
     justify-content: left;
     align-items: center;
-    /*background-color: orange;*/
+    background-color: orange;
 }
 
 .socials {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*background-color: green;*/
+    background-color: green;
 }
 
 .social {
@@ -144,9 +158,59 @@ a {
     color: rgb(126, 19, 19);
 }
 
-@media only screen and (max-width: calc(1.2 * 1600px)) {
+@media only screen and (max-width: calc(1.2 * 1500px)) {
     .root {
-        width: 80%;
-        /*background-color: orange;*/
+        width: 85vw;
+        background-color: rgb(81, 255, 0);
+    }
+
+    .projects-header {
+        width: 20vw;
+        margin-top: 0px;
+        font-size: 25px;
+        color: rgb(172, 35, 35);
+    }
+
+    .project img {
+        width: 50vw;
+        object-fit: cover;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+}
+
+/* Mobile port */
+@media only screen and (max-width: 1024px) {
+    .root {
+        background-color: rgb(209, 238, 103);
+    }
+
+    .intro-hello {
+        display: flex;
+        justify-content: center;
+        transform: translateY(0);
+        font-size: 32px;
+    }
+
+    .intro-body {
+        flex-direction: column-reverse;
+    }
+
+    .intro-icon {
+        display: flex;
+        justify-content: center;
+        background-color: red;
+    }
+
+    .intro-icon img {
+        width: 25vh;
+    }
+
+    .intro-tagline {
+        width: 100%;
+        font-size: 24px;
+        font-weight: 100;
     }
 }
